@@ -3,7 +3,17 @@
 
 ### Notes 
 
-- DevTools Setup in Intelij
+- DevTools Setup in Intelij.
+- Add spring-boot-devtools dependency if not already added
+- Enable Build project automatically as shown below
+
+![img.png](img.png)
+
+
+- Enable option in Advanced Settings as shown below.
+
+![img_1.png](img_1.png)
+
 
 ### H2 Database
 H2 database is an open source, embedded and in memory relational database management system. It is written in Java and provides a client/server application. It stores data in system memory instead of disk. Once program is closed, data is also lost.
