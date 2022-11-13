@@ -14,6 +14,10 @@
 
 ![img_1.png](img_1.png)
 
+### HTTP Verb vs CRUD
+
+![img_2.png](img_2.png)
+
 
 ### H2 Database
 H2 database is an open source, embedded and in memory relational database management system. It is written in Java and provides a client/server application. It stores data in system memory instead of disk. Once program is closed, data is also lost.
@@ -93,6 +97,15 @@ It auto-configures the bean that is present in the classpath and configures it t
 ### @SpringBootApplication
 
 It is a combination of three annotations @EnableAutoConfiguration, @ComponentScan, and @Configuration.
+
+### @Entity 
+annotation specifies that the class is an entity and is mapped to a database table.
+
+### @autowired
+Autowiring feature of spring framework enables you to inject the object dependency implicitly. It internally uses setter or constructor injection.
+
+### @PathVariable 
+The annotation is used to extract the value of the template variables and assign their value to a method variable.
 
 ## Spring MVC and REST Annotations
 

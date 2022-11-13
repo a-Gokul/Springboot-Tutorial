@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-@Service
+@Service  // class that will implement business logic
 public class DepartmentServiceImpl implements DepartmentService{
 
     @Autowired
