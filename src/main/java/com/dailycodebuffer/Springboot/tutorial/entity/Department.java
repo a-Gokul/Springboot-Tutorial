@@ -9,10 +9,11 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
 @Entity // specifies that the class is an entity and is mapped to a database table.
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+// @Data is = @setters @getters @equals hascode @tostringx
+@Data // to use lombok we use this annotation
+@NoArgsConstructor // for default constructor
+@AllArgsConstructor // constructor with all args
+@Builder  // @Builder annotation produces complex builder APIs for your classes. @Builder lets you automatically produce the code required to have your class be instantiable with code
 public class Department {
 
     @Id // mentioning the primary key
@@ -36,4 +37,8 @@ public class Department {
     private String departmentName;
     private String departmentAddress;
     private String departmentCode;
+
+
+    // *** Note we had setter getter and constructor before and we are removing those boiler plate code using lombok
+
 }

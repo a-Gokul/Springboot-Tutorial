@@ -9,8 +9,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-@ControllerAdvice
-@ResponseStatus
+
+// In case of any exception a DepartmentNotFoundException will be thrown
+// This controller Advice class will send a response back
+
+@ControllerAdvice // Class handling Exception must have the ControllerAdvice annotation
+@ResponseStatus // marks a method or exception class with the status code and reason message that should be returned.
 public class RestResponseEntityExceptionHandler
         extends ResponseEntityExceptionHandler {
 
@@ -18,7 +22,7 @@ public class RestResponseEntityExceptionHandler
     public ResponseEntity<ErrorMessage> departmentNotFoundException(DepartmentNotFoundException exception,
                                                     WebRequest request) {
         ErrorMessage message = new ErrorMessage(HttpStatus.NOT_FOUND,
-                exception.getMessage());
+                    exception.getMessage());
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(message);

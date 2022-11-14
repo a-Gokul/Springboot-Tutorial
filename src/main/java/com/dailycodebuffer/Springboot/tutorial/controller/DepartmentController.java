@@ -20,6 +20,7 @@ public class DepartmentController {
     // It internally uses setter or constructor injection.
     private DepartmentService departmentService;
 
+    // Spring boot as sl4j for logging
     private final Logger LOGGER =
             LoggerFactory.getLogger(DepartmentController.class);
 

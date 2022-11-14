@@ -107,6 +107,15 @@ Autowiring feature of spring framework enables you to inject the object dependen
 ### @PathVariable 
 The annotation is used to extract the value of the template variables and assign their value to a method variable.
 
+### @Builder
+This annotation produces complex builder APIs for your classes. @Builder lets you automatically produce the code required to have your class be instantiable with code
+
+### @ControllerAdvice
+It is a specialization of the @Component annotation which allows to handle exceptions across the whole application in one global handling component
+
+### @ResponseStatus
+This marks a method or exception class with the status code and reason message that should be returned. The status code is applied to the HTTP response when the handler method is invoked, or whenever the specified exception is thrown
+
 ## Spring MVC and REST Annotations
 
 ### @RequestMapping
@@ -148,3 +157,18 @@ It can be considered as a combination of @Controller and @ResponseBody annotatio
 
 ### @RequestAttribute
 It binds a method parameter to request attribute. It provides convenient access to the request attributes from a controller method. With the help of @RequestAttribute annotation, we can access objects that are populated on the server-side.
+
+
+### Builder Pattern
+
+Builder pattern was introduced to solve some of the problems with Factory Pattern
+
+- Too Many arguments to pass from client program to the Factory class that can be error prone because most of the time, the type of arguments are same and from client side its hard to maintain the order of the argument.
+- Some of the parameters might be optional but in Factory pattern, we are forced to send all the parameters and optional parameters need to send as NULL.
+- If the object is heavy and its creation is complex, then all that complexity will be part of Factory classes that is confusing.
+
+![img_3.png](img_3.png)
+
+![img_4.png](img_4.png)
+
+![img_5.png](img_5.png)
